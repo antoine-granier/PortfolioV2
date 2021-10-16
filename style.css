@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -24,9 +25,94 @@ section {
     clip-path: circle(0px at center center);
 }
 
+.scroll-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    visibility: visible;
+}
+  
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+}
+
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+.scroll-container span {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a307f;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.25;
+    animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
 .container {
     position: relative;
-    margin-top: 105vh;
+    margin-top: 135vh;
     background: #8a307f;
     padding: 100px;
     color: #fff;
@@ -72,6 +158,19 @@ section {
     color: #8a307f;
     font-size: 4em;
     user-select: none;
+}
+
+.underline {
+    background: rgb(240,236,242);
+    background: linear-gradient(90deg, rgba(240,236,242,1) 0%, rgba(226,233,244,1) 45%, rgba(249,242,254,1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.15em;
+    background-position: 0 80%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+    background-size: 100% 88%;
 }
 
 h4 {
@@ -185,8 +284,72 @@ h4 {
     color: #fff;
 }
 
+.container-title .title-section:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.container-title .title-section:nth-child(2) {
+    color: #fff;
+    animation: animate 4s ease-in-out;
+}
+
 ::-webkit-scrollbar {
     width: 0;
+}
+
+.card-project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    transform-style: preserve-3d;
+}
+
+.card-project .card {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 60px 0;
+    background: #000;
+    transform-style: preserve-3d;
+}
+
+.card-project .card {
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.2);
+}
+
+.card-project .card .img-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-project .card .content-card {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    background: #fff;
+    transform: translateZ(60px) scaleY(0);
+    padding: 40px 25px;
+    transform-origin: top;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-project .card:hover .content-card {
+    transform: translateZ(50px) scaleY(1);
+}
+
+.content-card h2,
+.content-card p {
+    color: #000;
 }
 
 @media (max-width: 767px) {

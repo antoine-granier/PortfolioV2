@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="particles-js"></div>
-    <h3 class="title">Antoine Granier</h3>
+    <h3 class="title"><span class="underline">Antoine</span> Granier</h3>
     <h4>Je suis un <span id="typed"></span></h4>
     <h2 class="text">Bienvenue sur mon Portfolio</h2>
     <section>
         <h2 class="innerText">Bienvenue sur mon Portfolio</h2>
     </section>
+    <div class="scroll-container">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <span>Scroll down</span>
+    </div>
     <div class="toggle"></div>
     <scection class="navigation">
         <span style="--i:0;"></span>
@@ -22,16 +29,17 @@
         <span style="--i:2;"></span>
         <span style="--i:3;"></span>
         <ul>
-            <li><a href="">Accueil</a></li>
-            <li><a href="">A propos</a></li>
-            <li><a href="">Expériences</a></li>
-            <li><a href="">Projets</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a id="link0" href="#" >Accueil</a></li>
+            <li><a id="link1" href="#about" >A propos</a></li>
+            <li><a id="link2" href="#experience" >Expériences</a></li>
+            <li><a id="link3" href="#project" >Projets</a></li>
+            <li><a id="link4" href="#contact" >Contact</a></li>
         </ul>
     </scection>
     <div class="container">
-        <h2>A propos</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed molestie purus, quis dapibus purus. Etiam pharetra eleifend leo, a condimentum dolor. Pellentesque at odio ullamcorper, vehicula nisl nec, aliquet libero. Vestibulum et enim at urna elementum placerat non vitae massa. Pellentesque laoreet sed tellus suscipit accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum cursus vehicula tempor. Sed ut ligula a erat malesuada pulvinar. Etiam porta, sem ut molestie ullamcorper, diam diam convallis sapien, quis pharetra leo turpis ac nulla. Nam malesuada, dui vel tristique porta, urna massa ullamcorper elit, sit amet feugiat nunc turpis consequat tortor. Proin a bibendum libero. Nullam lacinia arcu nisl, vel posuere felis tempor id. Pellentesque aliquam, tellus a molestie facilisis, leo ex tempor augue, vel facilisis lectus sem nec lorem. Nulla in mollis ipsum. Curabitur non tincidunt odio.
+        <div class="about" id="about">
+            <h2 class="title-section">À propos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed molestie purus, quis dapibus purus. Etiam pharetra eleifend leo, a condimentum dolor. Pellentesque at odio ullamcorper, vehicula nisl nec, aliquet libero. Vestibulum et enim at urna elementum placerat non vitae massa. Pellentesque laoreet sed tellus suscipit accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum cursus vehicula tempor. Sed ut ligula a erat malesuada pulvinar. Etiam porta, sem ut molestie ullamcorper, diam diam convallis sapien, quis pharetra leo turpis ac nulla. Nam malesuada, dui vel tristique porta, urna massa ullamcorper elit, sit amet feugiat nunc turpis consequat tortor. Proin a bibendum libero. Nullam lacinia arcu nisl, vel posuere felis tempor id. Pellentesque aliquam, tellus a molestie facilisis, leo ex tempor augue, vel facilisis lectus sem nec lorem. Nulla in mollis ipsum. Curabitur non tincidunt odio.
 
             Sed enim lacus, ultricies eu libero at, vestibulum scelerisque metus. Nulla molestie pellentesque ex, ac vulputate enim imperdiet ut. Quisque rhoncus turpis ut lacus maximus, sollicitudin iaculis ipsum ullamcorper. Mauris quis odio neque. Nunc tristique, odio vitae dapibus commodo, nibh sapien interdum lacus, quis vehicula metus lorem sed diam. Maecenas quis suscipit libero. Vestibulum rutrum nunc nec ligula sodales, quis porta risus fermentum. Etiam dolor est, maximus at lobortis vitae, interdum a nibh. Vivamus a vulputate ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc finibus libero quis massa accumsan hendrerit. Donec porta nisi libero, ac fermentum ipsum faucibus a. Integer sit amet consectetur tortor, a vestibulum tellus.
             
@@ -40,10 +48,56 @@
             Nam et sapien eget nisl tempus egestas. Etiam porttitor massa ac quam varius aliquam. Ut rutrum aliquam mattis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eget quam rutrum leo fringilla posuere. Nullam porttitor mi ac dui facilisis maximus. Nunc congue congue metus eget fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
             
             In eleifend arcu orci, a ultrices lorem pulvinar eget. Nullam nec tellus eget turpis tristique sollicitudin nec nec lacus. In placerat, justo at dignissim fermentum, justo elit tempor neque, et pharetra enim ligula vitae elit. Ut vestibulum lorem vitae lacus suscipit, in laoreet quam sagittis. Phasellus in urna vel augue suscipit hendrerit. Curabitur in interdum orci. Aenean aliquet velit in feugiat pharetra. Sed porttitor felis varius elit aliquet feugiat sed at metus. Duis et lacinia dui. Cras ligula nunc, ultrices non venenatis et, mollis quis orci. Donec odio felis, porta vitae turpis ut, pharetra luctus arcu. Phasellus et maximus sapien. Nam et congue sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        </div>
+        <div class="experience" id="experience">
+            <h2 class="tilte-section">Mon expérience</h2>
+        </div>
+        <div class="project" id="project">
+            <h2 class="title-section">Mes projets</h2>
+            <div class="card-project">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/tree.jpg" alt="image">
+                    </div>
+                    <div class="content-card">
+                        <h2 class="title-card">Exemple projet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum fringilla tristique. Maecenas a diam vitae libero placerat sodales a eu dolor.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/tree.jpg" alt="image">
+                    </div>
+                    <div class="content-card">
+                        <h2 class="title-card">Exemple projet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum fringilla tristique. Maecenas a diam vitae libero placerat sodales a eu dolor.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/tree.jpg" alt="image">
+                    </div>
+                    <div class="content-card">
+                        <h2 class="title-card">Exemple projet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum fringilla tristique. Maecenas a diam vitae libero placerat sodales a eu dolor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+
+        </div>
     </div>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 15,
+            speed: 300
+        });
+    </script>
 </body>
 </html>
